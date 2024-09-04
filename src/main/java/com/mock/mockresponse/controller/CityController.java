@@ -16,7 +16,7 @@ import java.util.List;
 public class CityController<V> {
     private final CityUseCase<V> cityUseCase;
 
-    @GetMapping("/cities")
+    @GetMapping("/v1/cities")
     public ResponseEntity<Mono<List<CityResponse>>> getCities(V request) {
         val response = cityUseCase.getListOfCities(request);
         return ResponseEntity.ok(response);
